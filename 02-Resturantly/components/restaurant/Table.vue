@@ -28,14 +28,26 @@ const restaurantsOrganized: OrganizedInterface = {
     <div class="table-container">
       <div class="table-col">
         <RestaurantRow 
-          v-for="res in restaurantsOrganized.first"
+          :is-header="true"
+        />
+        <RestaurantRow 
+          v-for="(res, i) in restaurantsOrganized.first"
           :key="res.id"
+          :name="res.name"
+          :rank="res.rank"
+          :index="i"
         />
       </div>
       <div class="table-col">
         <RestaurantRow 
-          v-for="res in restaurantsOrganized.second"
+          :is-header="true"
+        />
+        <RestaurantRow 
+          v-for="(res, i) in restaurantsOrganized.second"
           :key="res.id"
+          :name="res.name"
+          :rank="res.rank"
+          :index="i"
         />
       </div>
     </div>

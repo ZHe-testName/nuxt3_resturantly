@@ -8,7 +8,6 @@ interface RowProps {
 };
 
 const props = defineProps<RowProps>();
-//   :style="(index || 2) % 2 === 0 ? { background: 'rgba(128,128,128,0.15)' } : undefined"
 </script>
 
 <template>
@@ -19,6 +18,7 @@ const props = defineProps<RowProps>();
   <div
     v-else
     class="row"
+    :style="(index || 2) % 2 === 0 ? { background: 'rgba(128,128,128,0.15)' } : undefined"
   >
     <h4 class="header rank">{{ rank }}</h4>
     <NuxtLink :to="`/restaurants/${name}`" class="header link">{{

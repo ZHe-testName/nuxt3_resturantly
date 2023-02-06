@@ -2,7 +2,7 @@
   <div>
     <Html :lang="30 <= 50 ? 'en-GB' : 'en-US'" >
       <Head>
-        <Title>Restaurantly</Title>
+        <Title>TOP-50</Title>
         <Meta 
           name="description"
           content="My awesome Nuxt3 web app"
@@ -14,19 +14,10 @@
         />
       </Head>
     </Html>
-    <div class="container">
-      <h1>Welcome to Restorauntly</h1>
-
-      <a href="/restaurants">
-        Go to Restaurants
-      </a>
-    </div>
+    <NuxtLayout name="custom">
+      <div class="container">
+        <RestaurantTable />
+      </div>
+    </NuxtLayout>
   </div>
 </template>
-
-<style scoped>
-  .container {
-    text-align: center;
-    margin-top: 5rem;
-  }
-</style>
